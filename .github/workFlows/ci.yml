@@ -5,7 +5,7 @@ name: ti-lin-react
 on:
   push:
     branches:
-      - master
+      - main
 
 # 工作流
 jobs:
