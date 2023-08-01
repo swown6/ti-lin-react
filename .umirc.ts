@@ -2,6 +2,7 @@
  * 文档的配置文件,也可以在 .umi/dumi/config.json中配置
  */
 import { defineConfig } from 'dumi';
+const repo = 'ti-lin-react';  // 项目名
 
 export default defineConfig({
   title: 'ti-lin-react', // 网站标题名
@@ -14,6 +15,9 @@ export default defineConfig({
   outputPath: 'docs-dist',
   // 配置导航条模式 // 默认纵向，
   mode: 'site',
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+
   apiParser: {
     // 自定义属性过滤配置，也可以是一个函数，用法参考：https://github.com/styleguidist/react-docgen-typescript/#propfilter
     propFilter: {
