@@ -47,17 +47,17 @@ export default defineConfig({
       children: [
         {
           title: 'CSDN',
-          path: '',
+          path: 'https://blog.csdn.net/m0_71157847?spm=1000.2115.3001.5343',
         },
         {
           title: '掘金',
-          path: '',
+          path: 'https://juejin.cn/user/1568342086263021',
         },
       ],
     },
     {
       title: 'GitHub',
-      path: 'https://github.com/yq979292/cimi-react',
+      path: 'https://github.com/swown6/ti-lin-react',
     },
   ],
 });
