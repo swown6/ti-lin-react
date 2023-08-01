@@ -47,6 +47,8 @@ const Pagination: FC<PaginationProps> = memo(
               el.className = '';
             }
           });
+          // console.log(handleClick);
+
           return handleClick ? handleClick({ value: index + num + 1 }) : null;
         }
       }
