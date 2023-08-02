@@ -1,4 +1,4 @@
-import React, { useMemo, FC, memo } from 'react';
+import React, { useMemo, FC, memo, useState } from 'react';
 import Css from './index.module.less';
 import { InputProps } from './interface';
 const Input: FC<InputProps> = memo(
@@ -19,7 +19,6 @@ const Input: FC<InputProps> = memo(
       width: '120px',
       height: '34px',
     };
-
     if (width) {
       if (typeof width === 'string') {
         if (width.includes('%') || width.includes('px')) {
@@ -54,13 +53,19 @@ const Input: FC<InputProps> = memo(
           disabled={disabled}
           className={className}
           style={style}
-          value={value ? value : ''}
-          onChange={(e) => (handleChange ? handleChange({ value: e.currentTarget.value }) : null)}
+          onChange={(e) => {
+            (handleChange ? handleChange({ value: e.target.value }) : null)
+          }
+          }
           onBlur={(e) => {
-            handleBlur ? handleBlur({ value: e.currentTarget.value }) : null;
+            console.log(e.target);
+
+            handleBlur ? handleBlur({ value: e.target.value }) : null;
           }}
           onFocus={(e) => {
-            handleFcus ? handleFcus({ value: e.currentTarget.value }) : null;
+            console.log(e.target);
+
+            handleFcus ? handleFcus({ value: e.target.value }) : null;
           }}
         />
       </div>
