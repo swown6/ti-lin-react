@@ -1,6 +1,6 @@
 ---
 hero:
-  title: dream-react-ui
+  title: uu-react-ui
   desc: dumi-ui-site-template site example
   actions:
     - text: Getting Started
